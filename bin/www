@@ -12,7 +12,7 @@ var http = require('http');
  * Get port from environment and store in Express.
  */
 
-var port = normalizePort(process.env.PORT || '3000');
+var port = normalizePort(process.env.PORT || '3001');
 app.set('port', port);
 
 /**
@@ -31,7 +31,7 @@ server.on('listening', onListening);
 
 const ngrok = require('ngrok');
 (async function() {
-  const url = await ngrok.connect(3000);
+  const url = await ngrok.connect(3001);
   console.log(url)
 })();
 
